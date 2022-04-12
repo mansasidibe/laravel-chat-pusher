@@ -10,8 +10,12 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@inertiajs/inertia": "^0.11.0",
+        "@inertiajs/inertia-vue3": "^0.6.0",
+        "@inertiajs/progress": "^0.2.7",
         "@popperjs/core": "^2.10.2",
-        "@tailwindcss/forms": "^0.4.0",
+        "@tailwindcss/forms": "^0.5.0",
+        "@vue/compiler-sfc": "^3.2.31",
         "alpinejs": "^3.4.2",
         "autoprefixer": "^10.4.2",
         "axios": "^0.25",
@@ -24,11 +28,12 @@
         "sass": "^1.32.11",
         "sass-loader": "^11.0.1",
         "tailwindcss": "^3.0.18",
-        "vue": "^2.6.12",
-        "vue-loader": "^15.9.7",
+        "vue": "^3.2.31",
+        "vue-loader": "^17.0.0",
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "@cometchat-pro/chat": "^3.0.6",
         "laravel-echo": "^1.11.4",
         "pusher-js": "^7.0.6"
     }
