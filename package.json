@@ -34,7 +34,7 @@
     },
     "dependencies": {
         "@cometchat-pro/chat": "^3.0.6",
-        "laravel-echo": "^1.11.4",
+        "laravel-echo": "^1.11.5",
         "pusher-js": "^7.0.6"
     }
 }
