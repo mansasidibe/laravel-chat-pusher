@@ -6,6 +6,8 @@ use App\Models\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use App\Events\MessageSent;
+
 class ChatsController extends Controller
 {
     // PROTEGEONS TOUTES NOS FONCTION
@@ -27,12 +29,14 @@ class ChatsController extends Controller
 
     public function sendMessage(Request $request)
     {
-    $user = Auth::user();
+        $user = Auth::user();
 
-    $message = $user->messages()->create([
-        'message' => $request->input('message')
-    ]);
+        $message = $user->messages()->create([
+            'message' => $request->input('message')
+        ]);
 
-    return ['status' => 'Message envoyé!'];
+        broadcast(new MessageSent($user, $message))->toOthers();
+
+        return ['status' => 'Message envoyé!'];
     }
 }
